@@ -76,7 +76,7 @@ body {
 #container {
   color: #000;
   margin-top: 20px;
-  background: #fff url("../img/body-bg.jpg") no-repeat top right;
+  background: #fff url("/img/body-bg.jpg") no-repeat top right;
 }
 #container #bg-splash {
   width: 100%;
@@ -133,7 +133,7 @@ body {
   width: 20%;
   color: #5faffe;
   text-indent: -9999px;
-  background: url("../img/logo_libras.png") no-repeat center center;
+  background: url("/img/logo_libras.png") no-repeat center center;
   color: #5faffe;
   text-shadow: 2px 3px 3px #000;
   font-size: 27px;
@@ -220,7 +220,7 @@ form{
   border-radius: 0 0 10px 10px;
 }
 #container-footer h3 {
-  background: url("../img/logo_acessibilidade_brasil.png") no-repeat center
+  background: url("/img/logo_acessibilidade_brasil.png") no-repeat center
     center;
   width: 250px;
   height: 41px;
@@ -326,7 +326,7 @@ form{
   max-height: 92px;
 }
 #container-body #input-image {
-  background: #fff url(../img/bg-image.jpg) no-repeat center center;
+  background: #fff url("/img/bg-image.jpg") no-repeat center center;
 }
 #container-body .input-select option {
   height: 20px;
