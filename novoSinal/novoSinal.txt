@@ -1,0 +1,8 @@
+Nome: AIPIM
+Exemplo: Minha tia fez um bolo de a-i-p-i-m delicioso!
+Exemplo-libras: TI@ ME@ FAZER B-O-L-O A-I-P-I-M DELICIOS@!
+Acepção: Variedade de mandioca comestível, consumida em fatias, em forma de farinha, bolos, doces e pudins; macaxeira.
+Classe: SUBSTANTIVO
+Origem: NACIONAL
+
+vídeo, mão e imagem na pasta
