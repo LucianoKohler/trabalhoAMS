@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./img/logo_libras.png"
+      type="image/x-icon"
+    />
+    <title>Adicionar Sinal</title>
+  </head>
+  <body>
+    <div id="container" class="center">
+      <div id="bg-splash" style="display: none"></div>
+      <div id="container-header">
+        <h1 class="pull-left">Libras</h1>
+        <h2 class="pull-right">
+          Dicionário da Língua Brasileira de Sinais V3 - 2011
+        </h2>
+        <div class="clear"></div>
+      </div>
+
+      <div id="container-body">
+        <div id="line-1" class="row">
+          <div id="filter-order" class="pull-right">
+            <table class="box">
+              <tbody>
+                <tr>
+                  <td
+                    colspan="3"
+                    align="center"
+                    class="strong"
+                    style="background-color: #9fcaec"
+                  >
+                    Ordem
+                  </td>
+                </tr>
+                <tr>
+                  <td class="field alfabeto selected">
+                    <a href="/alfabeto" title="Alfabética" class="strong"
+                      >Alfabética</a
+                    >
+                  </td>
+                  <td class="field assunto">
+                    <a href="/assunto" title="Por assunto" class="strong"
+                      >Por assunto</a
+                    >
+                  </td>
+                  <td class="field mao">
+                    <a href="/mao" title="Mão" class="strong">Mão</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="clear"></div>
+            <div id="filter-letter" style="margin-top: 15px" class="pull-right">
+              <ul class="list-inline">
+                <li>
+                  <a
+                    id="letter-A"
+                    href="/letra/A"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >A</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-B"
+                    href="/letra/B"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >B</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-C"
+                    href="/letra/C"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >C</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-D"
+                    href="/letra/D"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >D</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-E"
+                    href="/letra/E"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >E</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-F"
+                    href="/letra/F"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >F</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-G"
+                    href="/letra/G"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >G</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-H"
+                    href="/letra/H"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >H</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-I"
+                    href="/letra/I"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >I</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-J"
+                    href="/letra/J"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >J</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-K"
+                    href="/letra/K"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >K</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-L"
+                    href="/letra/L"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >L</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-M"
+                    href="/letra/M"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >M</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-N"
+                    href="/letra/N"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >N</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-O"
+                    href="/letra/O"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >O</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-P"
+                    href="/letra/P"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >P</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-Q"
+                    href="/letra/Q"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >Q</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-R"
+                    href="/letra/R"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >R</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-S"
+                    href="/letra/S"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >S</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-T"
+                    href="/letra/T"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >T</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-U"
+                    href="/letra/U"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >U</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-V"
+                    href="/letra/V"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >V</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-W"
+                    href="/letra/W"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >W</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-X"
+                    href="/letra/X"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >X</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-Y"
+                    href="/letra/Y"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >Y</a
+                  >
+                </li>
+                <li>
+                  -
+                  <a
+                    id="letter-Z"
+                    href="/letra/Z"
+                    title="ver todas as ocorrências"
+                    class="strong"
+                    >Z</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pull-left">
+            <table
+              class="search box"
+              width="300px"
+              style="border: 1px solid #000"
+            >
+              <tbody>
+                <tr>
+                  <td
+                    colspan="2"
+                    align="center"
+                    class="strong"
+                    style="background-color: #9fcaec"
+                  >
+                    Busca
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <label
+                      ><input
+                        type="radio"
+                        name="type"
+                        value="palavra"
+                        checked=""
+                      />
+                      Palavra</label
+                    >&nbsp;
+                    <label
+                      ><input type="radio" name="type" value="exemplo" />
+                      Exemplo</label
+                    >&nbsp;
+                    <label
+                      ><input type="radio" name="type" value="acepcao" />
+                      Acepção</label
+                    >&nbsp;
+                    <label
+                      ><input type="radio" name="type" value="assunto" />
+                      Assunto</label
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Palavra:
+                    <input
+                      id="search_field"
+                      style="width: 143px"
+                      type="text"
+                      class="text"
+                      name="search"
+                      value=""
+                    />
+                  </td>
+                  <td>
+                    N*:
+                    <input
+                      class="text number"
+                      id="search_number"
+                      style="width: 40px"
+                      type="text"
+                      name="number"
+                      value=""
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="center"
+                    colspan="2"
+                    style="text-align: center; margin-top: 5px"
+                  >
+                    <input
+                      style="width: 40%"
+                      class="btn submit"
+                      type="submit"
+                      value="Buscar"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="clear"></div>
+        </div>
+
+        <div id="line-2" class="row">
+          <div class="col col-1">
+            <span class="col-title">Assuntos</span>
+            <select
+              class="items input-select"
+              id="input-assunto"
+              size="10"
+            ></select>
+          </div>
+          <div class="col col-2">
+            <span class="col-title">Palavras</span>
+            <select class="items input-select" id="input-palavras" size="10" onchange="if(this.value==='10'){mudarTudo();}">
+              <option id="0" selected="">-- SELECIONE --</option>
+              <option value="4" id="4">ABACATE</option>
+              <option value="5" id="5">ABACAXI</option>
+              <option value="6" id="6">ABAFAR</option>
+              <option value="7" id="7">ABAIXO</option>
+              <option value="8" id="8">ABAIXO-ASSINADO</option>
+              <option value="9" id="9">ABAJUR</option>
+              <option value="10" id="10">AIPIM</option>
+            </select>
+          </div>
+          <div class="col col-3">
+            <span class="col-title">Mão</span>
+            <div class="items input-text" id="input-mao"></div>
+          </div>
+          <div class="col col-4">
+            <span class="col-title">Vídeo</span>
+            <div class="items input-text" id="input-video"></div>
+          </div>
+
+          <div class="clear"></div>
+        </div>
+
+        <div id="line-3" class="row">
+          <div class="col col-1">
+            <span class="col-title">Acepção</span>
+            <div class="items input-text" id="input-acepcao"></div>
+          </div>
+
+          <div class="col col-2">
+            <span class="col-title">Exemplo</span>
+            <div class="items input-text" id="input-exemplo"></div>
+            <div class="clear"></div>
+            <span class="col-title">Classe Gramatical</span>
+            <div class="items input-text" id="input-classe"></div>
+          </div>
+          <div class="col col-3">
+            <span class="col-title">Exemplo Libras</span>
+            <div class="items input-text" id="input-libras"></div>
+            <div class="clear"></div>
+            <span class="col-title">Origem</span>
+            <div class="items input-text" id="input-origem"></div>
+          </div>
+          <div class="col col-4">
+            <span class="col-title">Imagem</span>
+            <div class="items input-text" id="input-image"></div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div id="container-footer">
+        <div class="row">
+          <h3>Acessibilidade Brasil</h3>
+        </div>
+        <a href="add.html">Adicionar um Sinal (ADM)</a>
+      </div>
+    </div>
+    <script>
+      function mudarTudo(){
+        document.getElementById('input-mao').innerHTML = '<img src="novoSinal/mao.jpg" alt="Mão Aipim" style="max-height:100%;">';
+        document.getElementById('input-video').innerHTML = '<video controls muted loop autoplay controlsList="nodownload noremoteplayback noplaybackrate" style="max-height:100%;"><source src="novoSinal/video.mp4" type="video/mp4">Seu navegador não suporta vídeo.</video>';
+        var video = document.querySelector('#input-video video');
+        if (video) {
+          video.controls = false;
+        }
+        document.getElementById('input-acepcao').innerText = 'Variedade de mandioca comestível, consumida em fatias, em forma de farinha, bolos, doces e pudins; macaxeira..';
+        document.getElementById('input-exemplo').innerText = 'Minha tia fez um bolo de a-i-p-i-m delicioso!';
+        document.getElementById('input-classe').innerText = 'Substantivo';
+        document.getElementById('input-libras').innerText = 'TI@ ME@ FAZER B-O-L-O A-I-P-I-M DELICIOS@!';
+        document.getElementById('input-origem').innerText = 'Nacional';
+        document.getElementById('input-image').innerHTML = '<img src="novoSinal/aipim.jpg" alt="Aipim" style="max-width:100%;">';
+      }
+    </script>
+  </body>
+</html>

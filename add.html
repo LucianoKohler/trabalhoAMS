@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="add.css" />
+    <link
+      rel="shortcut icon"
+      href="./img/logo_libras.png"
+      type="image/x-icon"
+    />
+    <title>Adicionar Sinal</title>
+  </head>
+  <body>
+    <div id="container" class="center">
+      <div id="bg-splash" style="display: none"></div>
+      <div id="container-header">
+        <h1 class="pull-left">Libras</h1>
+        <h2 class="pull-right">
+          Dicionário da Língua Brasileira de Sinais V3 - 2011
+        </h2>
+        <div class="clear"></div>
+      </div>
+
+      <div id="container-body">
+        <main>
+          <h1><center>ADICIONAR SINAL</center></h1>
+          <form action="">
+            <div class="esquerda">
+              <label for="nome">Nome do sinal: </label>
+              <input type="text" name="input-nome" id="nome" />
+
+              <label for="exemplo">Frase de exemplo: </label>
+              <input type="text" name="input-exemplo" id="exemplo" />
+
+              <label for="exemplo-libras">Exemplo em Libras: </label>
+              <input
+                type="text"
+                name="input-exemplo-libras"
+                id="exemplo-libras"
+              />
+
+              <div id="arquivos-div">
+                <div>
+                  <label for="sinal">Sinal de mão:</label>
+                  <div id="sinal-display" class="file-display">Selecione um <br> arquivo</div>
+                  <input type="file" name="input-de-mão" id="sinal" accept="image/*" />
+                </div>
+  
+                <div>
+                  <label for="video">Vídeo relacionado:</label>
+                  <div id="video-display" class="file-display">Selecione um <br> arquivo</div>
+                  <input type="file" name="input-de-vídeo" id="video" accept="video/*" />
+                </div>
+  
+                <div>
+                  <label for="imagem">Imagem relacionada:</label>
+                  <div id="imagem-display" class="file-display">Selecione um <br> arquivo</div>
+                  <input type="file" name="input-de-imagem" id="imagem" accept="image/*"/>
+                </div>
+              </div>
+            </div>
+            <div class="direita">
+              <label for="assunto">Assunto relacionado</label>
+              <select
+                name="seletor-de-assunto"
+                class="items input-select"
+                id="assunto"
+                size="3"
+              >
+                <option value="corpo-humano">Corpo Humano</option>
+                <option value="cumprimento">Cumprimento</option>
+                <option value="escola">Escola</option>
+                <option value="Esporte">Esporte</option>
+                <option value="fruta-tuberculo">Frutas/Tubérculos</option>
+                <option value="legume-verdura">Legume/Verdura</option>
+                <option value="lazer">Lazer</option>
+              </select>
+
+              <label for="classe-gramatical">Classe gramatical: </label>
+              <select
+                name="seletor-classe-gramatical"
+                class="items input-select"
+                id="classe-gramatical"
+                size="3"
+              >
+                <option value="substantivo">Substantivo</option>
+                <option value="verbo">Verbo</option>
+                <option value="adjetivo">Adjetivo</option>
+                <option value="pronome">Pronome</option>
+                <option value="adverbio">Advérbio</option>
+                <option value="outro">Outro</option>
+              </select>
+
+              <label for="origem">Origem: </label>
+              <select
+                name="seletor-origem"
+                class="items input-select"
+                id="origem"
+                size="3"
+              >
+                <option value="universal">Universal</option>
+                <option value="nacional">Nacional</option>
+                <option value="ac">AC</option>
+                <option value="al">AL</option>
+                <option value="ap">AP</option>
+                <option value="am">AM</option>
+                <option value="ba">BA</option>
+                <option value="sc">SC</option>
+                <option value="sp">SP</option>
+              </select>
+
+              <label for="acepcao">Acepção (significado): </label>
+              <textarea
+                name="input-acepcap"
+                id="acepcao"
+                rows="4"
+                style="resize: none; width: 100%"
+              ></textarea>
+            </div>
+          </form>
+          <button type="submit" id="adicionar-button">Adicionar sinal</button>
+        </main>
+      </div>
+      <div id="container-footer">
+        <div class="row">
+          <h3>Acessibilidade Brasil</h3>
+        </div>
+        <a href="adicionado.html">Página Inicial</a>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("adicionar-button")
+        .addEventListener("click", function (e) {
+          nomeSinal = document.getElementById("nome").value;
+          fraseExemplo = document.getElementById("exemplo").value;
+          fraseExemploLibras = document.getElementById("exemplo-libras").value;
+          acepcao = document.getElementById("acepcao").value;
+          sinalFile = document.getElementById("sinal").files.length > 0;
+          videoFile = document.getElementById("video").files.length > 0;
+          imagemFile = document.getElementById("imagem").files.length > 0;
+
+          assuntoSelecionado =
+            document.getElementById("assunto").selectedIndex !== -1;
+          classeGramaticalSelecionada =
+            document.getElementById("classe-gramatical").selectedIndex !== -1;
+          origemSelecionada =
+            document.getElementById("origem").selectedIndex !== -1;
+
+          let missingFields = [];
+
+          if (!nomeSinal) missingFields.push("Nome do sinal");
+          if (!fraseExemplo) missingFields.push("Frase de exemplo");
+          if (!fraseExemploLibras) missingFields.push("Exemplo em Libras");
+          if (!sinalFile) missingFields.push("Sinal de mão");
+          if (!videoFile) missingFields.push("Vídeo relacionado");
+          if (!imagemFile) missingFields.push("Imagem relacionada");
+          if (!assuntoSelecionado) missingFields.push("Assunto relacionado");
+          if (!classeGramaticalSelecionada)
+            missingFields.push("Classe gramatical");
+          if (!origemSelecionada) missingFields.push("Origem");
+          if (!acepcao) missingFields.push("Acepção (significado)");
+
+          if (missingFields.length > 0) {
+            alert(
+              "Erro! Preencha os seguintes campos:\n\n" +
+                missingFields.join("\n")
+            );
+          } else {
+            alert("Sinal adicionado com sucesso!");
+          }
+
+          if (missingFields.length === 0) {
+            const data = {
+              nomeSinal,
+              fraseExemplo,
+              fraseExemploLibras,
+              acepcao,
+              assunto: document.getElementById("assunto").value,
+              classeGramatical: document.getElementById("classe-gramatical").value,
+              origem: document.getElementById("origem").value,
+            };
+
+            // Save file names (not file data) for reference
+            data.sinalFileName = document.getElementById("sinal").files[0]?.name || "";
+            data.videoFileName = document.getElementById("video").files[0]?.name || "";
+            data.imagemFileName = document.getElementById("imagem").files[0]?.name || "";
+
+            // Optionally, save file data as base64 (for images)
+            const sinalFile = document.getElementById("sinal").files[0];
+            const imagemFile = document.getElementById("imagem").files[0];
+            const videoFile = document.getElementById("video").files[0];
+
+            const saveToLocalStorage = () => {
+              localStorage.setItem("novoSinal", JSON.stringify(data));
+            };
+
+            if (sinalFile && sinalFile.type.startsWith("image/")) {
+              const reader = new FileReader();
+              reader.onload = function(ev) {
+                data.sinalFileData = ev.target.result;
+                if (imagemFile && imagemFile.type.startsWith("image/")) {
+                  const reader2 = new FileReader();
+                  reader2.onload = function(ev2) {
+                    data.imagemFileData = ev2.target.result;
+                    saveToLocalStorage();
+                  };
+                  reader2.readAsDataURL(imagemFile);
+                } else {
+                  saveToLocalStorage();
+                }
+              };
+              reader.readAsDataURL(sinalFile);
+            } else if (imagemFile && imagemFile.type.startsWith("image/")) {
+              const reader = new FileReader();
+              reader.onload = function(ev) {
+                data.imagemFileData = ev.target.result;
+                saveToLocalStorage();
+              };
+              reader.readAsDataURL(imagemFile);
+            } else {
+              saveToLocalStorage();
+            }
+          }
+        });
+
+        document.getElementById("sinal-display").addEventListener("click", function(e) {
+          document.getElementById("sinal").click();
+        });
+
+        document.getElementById("video-display").addEventListener("click", function(e) {
+          document.getElementById("video").click();
+        });
+
+        document.getElementById("imagem-display").addEventListener("click", function(e) {
+          document.getElementById("imagem").click();
+        });
+
+        document.getElementById("sinal").addEventListener("change", function(e) {
+          const file = e.target.files[0];
+          const display = document.getElementById("sinal-display");
+          if (file && file.type.startsWith("image/")) {
+            const reader = new FileReader();
+            reader.onload = function(ev) {
+              display.innerHTML = `<img src="${ev.target.result}" alt="Sinal de mão" style="max-width:170px;max-height:170px;">`;
+            };
+            reader.readAsDataURL(file);
+          } else {
+            display.innerHTML = "Selecione um <br> arquivo";
+          }
+        });
+
+        document.getElementById("imagem").addEventListener("change", function(e) {
+          const file = e.target.files[0];
+          const display = document.getElementById("imagem-display");
+          if (file && file.type.startsWith("image/")) {
+            const reader = new FileReader();
+            reader.onload = function(ev) {
+              display.innerHTML = `<img src="${ev.target.result}" alt="Imagem relacionada" style="max-width:170px;max-height:170px;">`;
+            };
+            reader.readAsDataURL(file);
+          } else {
+            display.innerHTML = "Selecione um <br> arquivo";
+          }
+        });
+
+        document.getElementById("video").addEventListener("change", function(e) {
+          const file = e.target.files[0];
+          const display = document.getElementById("video-display");
+          if (file && file.type.startsWith("video/")) {
+            const url = URL.createObjectURL(file);
+            display.innerHTML = `<video src="${url}" autoplay muted loop playsinline style="max-width:170px;max-height:170px;pointer-events:none;"></video>`;
+          } else {
+            display.innerHTML = "Selecione um <br> arquivo";
+          }
+        });
+    </script>
+  </body>
+</html>
